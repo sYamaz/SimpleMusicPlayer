@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  SimpleMusicPlayer
 //
-//  Created by 山﨑駿 on 2020/05/09.
+//  Created by sYamaz on 2020/05/09.
 //  Copyright © 2020 sYamaz. All rights reserved.
 //
 
@@ -11,10 +11,20 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
+    private let musicDataBase = MusicDataBase()
+    let musicPlayer = MusicPlayer()
+    let musicList = MusicList()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // musicListのセットアップ
+        let musics = musicDataBase.LoadMusics()
+        musicList.AddMusics(musics: musics)
+        musicList.Shuffle()
+        
+        musicPlayer.PlayNew(musics: musicList.GetItems())
+        
         return true
     }
 

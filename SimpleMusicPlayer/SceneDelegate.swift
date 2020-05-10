@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  SimpleMusicPlayer
 //
-//  Created by 山﨑駿 on 2020/05/09.
+//  Created by sYamaz on 2020/05/09.
 //  Copyright © 2020 sYamaz. All rights reserved.
 //
 
@@ -19,6 +19,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
+        //let app = UIApplication.shared.delegate as! AppDelegate
+        //let musicList = app.musicList
+        
         // Create the SwiftUI view that provides the window contents.
         let contentView = ContentView()
 
@@ -36,6 +39,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This occurs shortly after the scene enters the background, or when its session is discarded.
         // Release any resources associated with this scene that can be re-created the next time the scene connects.
         // The scene may re-connect later, as its session was not neccessarily discarded (see `application:didDiscardSceneSessions` instead).
+        
+        
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
@@ -62,3 +67,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 }
 
+
+struct SceneDelegate_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+    }
+}

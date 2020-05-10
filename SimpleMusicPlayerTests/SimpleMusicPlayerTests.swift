@@ -2,7 +2,7 @@
 //  SimpleMusicPlayerTests.swift
 //  SimpleMusicPlayerTests
 //
-//  Created by 山﨑駿 on 2020/05/09.
+//  Created by sYamaz on 2020/05/09.
 //  Copyright © 2020 sYamaz. All rights reserved.
 //
 
